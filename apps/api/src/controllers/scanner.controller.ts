@@ -50,7 +50,7 @@ export class ScannerController {
       console.error('Error scanning contract:', error);
       res.status(500).json({
         success: false,
-        error: error.message
+        error: error instanceof Error ? error.message : 'Unknown error'
       });
     }
   }
@@ -84,7 +84,7 @@ export class ScannerController {
       console.error('Error in bulk scan:', error);
       res.status(500).json({
         success: false,
-        error: error.message
+        error: error instanceof Error ? error.message : 'Unknown error'
       });
     }
   }
@@ -102,7 +102,7 @@ export class ScannerController {
       console.error('Error getting vulnerabilities:', error);
       res.status(500).json({
         success: false,
-        error: error.message
+        error: error instanceof Error ? error.message : 'Unknown error'
       });
     }
   }
@@ -126,7 +126,7 @@ export class ScannerController {
       console.error('Error assessing risk:', error);
       res.status(500).json({
         success: false,
-        error: error.message
+        error: error instanceof Error ? error.message : 'Unknown error'
       });
     }
   }
@@ -286,7 +286,7 @@ export class ScannerController {
       res.status(500).json({
         success: false,
         error: 'Demo scan failed',
-        details: error.message
+        details: error instanceof Error ? error.message : 'Unknown error'
       });
     }
   }

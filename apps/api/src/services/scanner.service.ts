@@ -116,7 +116,7 @@ export class ContractScannerService {
         return { ...cached.data, lastScanned: new Date() };
       }
       
-      throw new Error(`Failed to scan contract ${address}: ${error.message}`);
+      throw new Error(`Failed to scan contract ${address}: ${error instanceof Error ? error.message : 'Unknown error'}`);
     }
   }
 
