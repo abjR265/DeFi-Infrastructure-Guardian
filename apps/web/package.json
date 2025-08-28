@@ -11,7 +11,8 @@
     "lint": "eslint .",
     "type-check": "tsc --noEmit",
     "clean": "rm -rf dist",
-    "postinstall": "npm run build"
+    "postinstall": "npm run build",
+    "start": "npx serve -s dist -l $PORT"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -58,6 +59,7 @@
     "react-resizable-panels": "^2.1.9",
     "react-router-dom": "^6.30.1",
     "recharts": "^2.15.4",
+    "serve": "^14.2.1",
     "socket.io-client": "^4.8.1",
     "sonner": "^1.7.4",
     "tailwind-merge": "^2.6.0",
