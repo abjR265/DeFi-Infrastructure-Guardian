@@ -1,0 +1,164 @@
+# =============================================================================
+# DeFi Infrastructure Guardian - API Git Ignore
+# =============================================================================
+
+# =============================================================================
+# CRITICAL: ENVIRONMENT & SECRETS
+# =============================================================================
+# Environment variables (NEVER commit these!)
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.staging
+.env.*.local
+
+# Secrets and credentials
+secrets/
+credentials/
+*.key
+*.pem
+*.keystore
+config/secrets.json
+config/credentials.json
+config/database.json
+config/redis.json
+
+# =============================================================================
+# DEPENDENCIES
+# =============================================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# =============================================================================
+# DATABASE & CACHE
+# =============================================================================
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Redis dump files
+dump.rdb
+*.rdb
+
+# Database migrations (if they contain sensitive data)
+prisma/migrations/*/migration.sql
+
+# =============================================================================
+# BUILD OUTPUTS
+# =============================================================================
+dist/
+build/
+out/
+
+# =============================================================================
+# LOGS & DEBUGGING
+# =============================================================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# =============================================================================
+# DEVELOPMENT & EDITOR FILES
+# =============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# =============================================================================
+# TESTING & QUALITY
+# =============================================================================
+coverage/
+.nyc_output/
+.jest/
+
+# =============================================================================
+# TEMPORARY FILES
+# =============================================================================
+*.tmp
+*.temp
+.tmp/
+.temp/
+.cache/
+.eslintcache
+
+# =============================================================================
+# PROJECT SPECIFIC
+# =============================================================================
+*.tsbuildinfo
+*.generated.*
+*.min.*
+*.bundle.*
+
+# =============================================================================
+# API KEYS & SECRETS (EXTRA PROTECTION)
+# =============================================================================
+# Common API key patterns
+*api-key*
+*api_key*
+*secret*
+*token*
+*password*
+*credential*
+
+# Specific service keys
+alchemy*
+infura*
+etherscan*
+coingecko*
+defillama*
+discord*
+telegram*
+slack*
+smtp*
+email*
+
+# =============================================================================
+# BLOCKCHAIN & CRYPTO
+# =============================================================================
+# Private keys and wallets
+*.pem
+*.key
+*.keystore
+wallets/
+private-keys/
+mnemonics.txt
+
+# Blockchain data
+blockchain-data/
+chaindata/
+*.chaindata
+
+# =============================================================================
+# END
+# =============================================================================
