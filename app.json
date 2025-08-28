@@ -1,0 +1,39 @@
+{
+  "name": "defi-infrastructure-guardian",
+  "description": "Real-time monitoring and coordinated response system for infrastructure-level DeFi risks",
+  "repository": "https://github.com/abjR265/DeFi-Infrastructure-Guardian",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["defi", "security", "blockchain", "monitoring", "react", "node"],
+  "env": {
+    "NODE_ENV": {
+      "description": "Environment setting",
+      "value": "production"
+    },
+    "PORT": {
+      "description": "Port for the application",
+      "value": "3001"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql:mini"
+    },
+    {
+      "plan": "heroku-redis:mini"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "scripts": {
+    "postdeploy": "npm run build"
+  }
+}

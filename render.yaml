@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: defi-infrastructure-guardian-api
+    env: node
+    plan: starter
+    buildCommand: cd apps/api && npm install && npm run build
+    startCommand: cd apps/api && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+    healthCheckPath: /health
+    autoDeploy: true
+
+  - type: web
+    name: defi-infrastructure-guardian-web
+    env: static
+    plan: starter
+    buildCommand: cd apps/web && npm install && npm run build
+    staticPublishPath: apps/web/dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://defi-infrastructure-guardian-api.onrender.com
+      - key: VITE_WS_URL
+        value: wss://defi-infrastructure-guardian-api.onrender.com
+    autoDeploy: true
+
+databases:
+  - name: defi-guardian-postgres
+    databaseName: defi_guardian_prod
+    user: defi_guardian_user
+    plan: starter
+
+  - name: defi-guardian-redis
+    plan: starter

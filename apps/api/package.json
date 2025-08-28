@@ -8,7 +8,9 @@
     "build": "tsc -p tsconfig.json",
     "start": "node dist/server.js",
     "lint": "eslint .",
-    "type-check": "tsc -p tsconfig.json --noEmit"
+    "type-check": "tsc -p tsconfig.json --noEmit",
+    "clean": "rm -rf dist",
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "axios": "^1.11.0",
@@ -27,5 +29,9 @@
     "eslint": "^9.12.0",
     "tsx": "^4.19.2",
     "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=9.0.0"
   }
 }
