@@ -10,12 +10,12 @@
 
 ## Live Demo
 
-**Production Deployment:**
+**Production Deployment**
 - **Frontend (Vercel):** [https://de-fi-infrastructure-guardian-web.vercel.app/](https://de-fi-infrastructure-guardian-web.vercel.app/)
-- **Backend API (Render):** [https://defi-infrastructure-guardian.onrender.com](https://defi-infrastructure-guardian.onrender.com)
+- **Backend API (Render)** [https://defi-infrastructure-guardian.onrender.com](https://defi-infrastructure-guardian.onrender.com)
 
 **Live Video Demo:**
-- **🎬 Full Demo Walkthrough:** [Watch the complete demo on Loom](https://www.loom.com/share/67a4b50490a741758e4449d3c5388106?sid=6981135f-3538-43a4-af7f-15a3d11dcdf0)
+- ** Full Demo Walkthrough:** [Watch complete demo on Loom](https://www.loom.com/share/67a4b50490a741758e4449d3c5388106?sid=6981135f-3538-43a4-af7f-15a3d11dcdf0)
 
 **API Endpoints:**
 - **Health Check:** [https://defi-infrastructure-guardian.onrender.com/health](https://defi-infrastructure-guardian.onrender.com/health)
