@@ -27,5 +27,23 @@
         "numReplicas": 1
       }
     }
+  },
+  "environments": {
+    "production": {
+      "services": {
+        "api": {
+          "build": {
+            "builder": "DOCKERFILE",
+            "dockerfilePath": "Dockerfile.api"
+          }
+        },
+        "web": {
+          "build": {
+            "builder": "DOCKERFILE",
+            "dockerfilePath": "Dockerfile.web"
+          }
+        }
+      }
+    }
   }
 }
