@@ -8,7 +8,6 @@
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build",
-    "build:api": "cd apps/api && npm install && npm run build",
     "start": "turbo run start",
     "test": "turbo run test",
     "lint": "turbo run lint",
@@ -17,11 +16,7 @@
     "docker:build": "docker-compose -f docker/docker-compose.yml build",
     "docker:up": "docker-compose -f docker/docker-compose.yml up -d",
     "docker:down": "docker-compose -f docker/docker-compose.yml down",
-    "docker:logs": "docker-compose -f docker/docker-compose.yml logs -f",
-    "deploy:vercel": "vercel --prod",
-    "deploy:railway": "railway up",
-    "deploy:render": "render deploy",
-    "deploy:heroku": "heroku container:push web && heroku container:release web"
+    "docker:logs": "docker-compose -f docker/docker-compose.yml logs -f"
   },
   "devDependencies": {
     "turbo": "^1.10.0",
