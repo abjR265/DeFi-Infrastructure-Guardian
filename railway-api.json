@@ -1,9 +1,7 @@
 {
   "$schema": "https://railway.app/railway.schema.json",
   "build": {
-    "builder": "NIXPACKS",
-    "installCommand": "cd apps/api && npm install",
-    "buildCommand": "cd apps/api && npm run build",
-    "startCommand": "cd apps/api && npm start"
+    "builder": "DOCKERFILE",
+    "dockerfilePath": "Dockerfile.api"
   }
 }

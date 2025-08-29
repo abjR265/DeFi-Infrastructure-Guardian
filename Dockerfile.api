@@ -1,0 +1,23 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Copy only the API directory
+COPY apps/api/package*.json ./apps/api/
+COPY apps/api/tsconfig.json ./apps/api/
+
+# Install only API dependencies
+WORKDIR /app/apps/api
+RUN npm install
+
+# Copy API source code
+COPY apps/api/src ./src
+
+# Build the API
+RUN npm run build
+
+# Expose port
+EXPOSE 3001
+
+# Start the API
+CMD ["npm", "start"]
