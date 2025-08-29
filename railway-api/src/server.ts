@@ -2,8 +2,8 @@ import dotenv from "dotenv";
 import express from "express";
 import cors from "cors";
 import { createServer } from "http";
-import { ScannerController } from "./controllers/scanner.controller";
-import { WebSocketService } from "./services/websocket.service";
+import { ScannerController } from "./controllers/scanner.controller.js";
+import { WebSocketService } from "./services/websocket.service.js";
 
 dotenv.config();
 

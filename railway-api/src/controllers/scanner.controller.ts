@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
 import { ethers } from 'ethers';
-import { ContractScannerService } from '../services/scanner.service';
-import { RiskAssessmentService } from '../services/risk.service';
-import { WebSocketService } from '../services/websocket.service';
+import { ContractScannerService } from '../services/scanner.service.js';
+import { RiskAssessmentService } from '../services/risk.service.js';
+import { WebSocketService } from '../services/websocket.service.js';
 
 interface ContractInfo {
   address: string;

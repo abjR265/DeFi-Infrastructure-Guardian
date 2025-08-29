@@ -1,4 +1,4 @@
-import { ContractInfo, VulnerabilityRule } from './scanner.service';
+import { ContractInfo, VulnerabilityRule } from './scanner.service.js';
 
 export interface RiskScore {
   protocol: string;

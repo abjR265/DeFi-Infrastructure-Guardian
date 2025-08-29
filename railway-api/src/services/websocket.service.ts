@@ -1,6 +1,6 @@
 import { Server as SocketIOServer } from 'socket.io';
 import { Server as HTTPServer } from 'http';
-import { ContractInfo } from './scanner.service';
+import { ContractInfo } from './scanner.service.js';
 
 export interface WebSocketEvent {
   type: 'alert' | 'scan_complete' | 'risk_update' | 'bot_status' | 'tvl_update';
