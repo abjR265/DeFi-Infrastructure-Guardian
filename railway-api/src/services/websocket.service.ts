@@ -32,7 +32,6 @@ export class WebSocketService {
         timestamp: new Date()
       });
 
-      // Handle client disconnection
       socket.on('disconnect', () => {
         console.log(`Client disconnected: ${socket.id}`);
       });
