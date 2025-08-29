@@ -10,7 +10,7 @@ export const Dashboard = () => {
       <Header />
       
       <main className="container mx-auto px-6 py-8">
-        {/* Stats Row */}
+        {/* Stats Row ****/}
         <StatsCards />
         
         {/* Main Content - Vertical Stack */}
