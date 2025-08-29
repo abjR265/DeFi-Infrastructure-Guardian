@@ -1,0 +1,28 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+COPY apps/web/package*.json ./apps/web/
+
+# Install dependencies (without running postinstall)
+RUN npm install --ignore-scripts
+
+# Copy web app source
+COPY apps/web/ ./apps/web/
+
+# Build the web app explicitly
+RUN cd apps/web && npm run build
+
+# Verify the build output
+RUN ls -la apps/web/dist/
+
+# Install serve for static file serving
+RUN npm install -g serve
+
+# Expose port
+EXPOSE 3000
+
+# Start the web app
+CMD ["sh", "-c", "cd apps/web && npx serve -s dist -l $PORT"]
