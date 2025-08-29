@@ -14,6 +14,10 @@ RUN npm install
 # Build the application
 RUN npm run build
 
+# List files to debug
+RUN ls -la
+RUN ls -la dist/
+
 # Expose port
 EXPOSE 3001
 

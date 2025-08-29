@@ -2,22 +2,20 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-# Copy only the API directory
-COPY apps/api/package*.json ./apps/api/
-COPY apps/api/tsconfig.json ./apps/api/
+# Copy the railway-api directory
+COPY railway-api/ ./railway-api/
 
-# Install only API dependencies
-WORKDIR /app/apps/api
+# Set working directory to railway-api
+WORKDIR /app/railway-api
+
+# Install dependencies
 RUN npm install
 
-# Copy API source code
-COPY apps/api/src ./src
-
-# Build the API
+# Build the application
 RUN npm run build
 
 # Expose port
 EXPOSE 3001
 
-# Start the API
+# Start the application
 CMD ["npm", "start"]
