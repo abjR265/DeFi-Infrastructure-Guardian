@@ -236,7 +236,7 @@ VITE_WS_URL=ws://localhost:3001
 
 ## Current Status
 
-### ✅ Production Deployment
+###  Production Deployment
 - [x] **Frontend (Vercel)** - [Live Dashboard](https://de-fi-infrastructure-guardian-web.vercel.app/)
 - [x] **Backend (Render)** - [API Service](https://defi-infrastructure-guardian.onrender.com)
 - [x] **Real-time Communication** - WebSocket integration
