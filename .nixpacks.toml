@@ -8,4 +8,4 @@ cmds = ["cd railway-api && npm install"]
 cmds = ["cd railway-api && npm run build"]
 
 [start]
-cmd = "./start.sh"
+cmd = "cd railway-api && npm start"
