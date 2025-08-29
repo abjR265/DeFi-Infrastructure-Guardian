@@ -1,0 +1,16 @@
+# Exclude frontend from Railway API builds
+apps/web/
+apps/web/**
+node_modules/
+.npm-cache/
+.git/
+.gitignore
+README.md
+RAILWAY_DEPLOYMENT.md
+railway-web.json
+vercel.json
+render.yaml
+Procfile
+app.json
+docker/
+nginx.conf
