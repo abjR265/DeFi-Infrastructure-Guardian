@@ -56,7 +56,7 @@ export class RiskAssessmentService {
       const contractVulnerabilities = this.checkVulnerabilities(contract);
       foundVulnerabilities.push(...contractVulnerabilities);
       
-      // Add to risk score based on severity
+      // Add to risk score based on severity 1-100
       for (const vuln of contractVulnerabilities) {
         switch (vuln.severity) {
           case 'CRITICAL':
