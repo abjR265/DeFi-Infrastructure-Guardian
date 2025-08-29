@@ -8,6 +8,17 @@
 [![Turbo](https://img.shields.io/badge/Turbo-1.10-purple.svg)](https://turbo.build/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+## Live Demo
+
+**Production Deployment:**
+- **Frontend (Vercel):** [https://de-fi-infrastructure-guardian-web.vercel.app/](https://de-fi-infrastructure-guardian-web.vercel.app/)
+- **Backend API (Render):** [https://defi-infrastructure-guardian.onrender.com](https://defi-infrastructure-guardian.onrender.com)
+
+**API Endpoints:**
+- **Health Check:** [https://defi-infrastructure-guardian.onrender.com/health](https://defi-infrastructure-guardian.onrender.com/health)
+- **Demo Scan:** [https://defi-infrastructure-guardian.onrender.com/api/scan/demo](https://defi-infrastructure-guardian.onrender.com/api/scan/demo)
+- **WebSocket Status:** [https://defi-infrastructure-guardian.onrender.com/api/ws/status](https://defi-infrastructure-guardian.onrender.com/api/ws/status)
+
 ## Mission
 
 Prevent systemic DeFi exploits through real-time infrastructure monitoring, coordinated emergency responses, gamified white hat protection, and predictive analysis to stop exploits before they happen.
@@ -52,11 +63,9 @@ DeFi Infrastructure Guardian
 │   ├── apps/api/          # Node.js/Express API
 │   ├── apps/web/          # React/Vite Frontend
 │   └── packages/          # Shared utilities
-├── Docker Infrastructure
-│   ├── PostgreSQL            # Database
-│   ├── Redis                 # Caching & Sessions
-│   ├── API Service           # Backend API
-│   └── Web Service           # Frontend Application
+├── Production Deployment
+│   ├── Frontend (Vercel)     # React/Vite Application
+│   └── Backend (Render)      # Node.js/Express API
 └── Development Tools
     ├── TypeScript            # Type safety
     ├── ESLint               # Code quality
@@ -69,9 +78,10 @@ DeFi Infrastructure Guardian
 - **Runtime**: Node.js 20 with TypeScript
 - **Framework**: Express.js with Socket.IO
 - **Blockchain**: Ethers.js for Ethereum interaction
-- **Database**: PostgreSQL with Redis caching
+- **Database**: PostgreSQL with Redis caching (planned)
 - **Real-time**: Socket.IO for WebSocket communication
 - **HTTP Client**: Axios for external API calls
+- **Deployment**: Render (Node.js Web Service)
 
 ### Frontend
 - **Framework**: React 18 with TypeScript
@@ -82,19 +92,19 @@ DeFi Infrastructure Guardian
 - **Real-time**: Socket.IO client for live updates
 - **Charts**: Recharts for data visualization
 - **Animations**: Framer Motion for smooth interactions
+- **Deployment**: Vercel (React/Vite Application)
 
 ### Infrastructure
 - **Monorepo**: Turborepo for efficient development
-- **Containerization**: Docker with Docker Compose
-- **Database**: PostgreSQL 15 for persistent storage
-- **Caching**: Redis 7 for session and cache management
+- **Frontend Hosting**: Vercel with automatic deployments
+- **Backend Hosting**: Render with Node.js runtime
 - **Development**: Hot reload with TypeScript compilation
+- **CI/CD**: GitHub Actions with automatic deployment
 
 ## Installation
 
 ### Prerequisites
 - Node.js 20+
-- Docker and Docker Compose
 - Git
 
 ### Quick Start
@@ -226,6 +236,12 @@ VITE_WS_URL=ws://localhost:3001
 
 ## Current Status
 
+### ✅ Production Deployment
+- [x] **Frontend (Vercel)** - [Live Dashboard](https://de-fi-infrastructure-guardian-web.vercel.app/)
+- [x] **Backend (Render)** - [API Service](https://defi-infrastructure-guardian.onrender.com)
+- [x] **Real-time Communication** - WebSocket integration
+- [x] **Environment Configuration** - Production environment variables
+
 ### Completed Features
 - [x] **Monorepo Setup** - Turborepo with TypeScript
 - [x] **Backend API** - Express.js with Socket.IO
@@ -234,8 +250,9 @@ VITE_WS_URL=ws://localhost:3001
 - [x] **Vulnerability Database** - Known exploit patterns
 - [x] **Real-time Communication** - WebSocket integration
 - [x] **Risk Assessment** - Multi-level scoring system
-- [x] **Docker Deployment** - Containerized infrastructure
 - [x] **Type Safety** - Comprehensive TypeScript coverage
+- [x] **Production Deployment** - Vercel + Render hosting
+- [x] **Clean UI** - Removed navigation clutter
 
 ### In Progress
 - [ ] **Real TVL Integration** - DeFiLlama API connection
@@ -247,7 +264,7 @@ VITE_WS_URL=ws://localhost:3001
 ### Roadmap
 - [ ] **Phase 2**: Advanced monitoring and alerting
 - [ ] **Phase 3**: Simulation and response coordination
-- [ ] **Phase 4**: Production deployment and scaling
+- [ ] **Phase 4**: Database integration and scaling
 
 ## Contributing
 
