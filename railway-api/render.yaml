@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: defi-guardian-api
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
+      - key: ETHEREUM_RPC_URL
+        value: https://eth-mainnet.alchemyapi.io/v2/demo
+      - key: JWT_SECRET
+        generateValue: true
+      - key: API_KEY
+        generateValue: true

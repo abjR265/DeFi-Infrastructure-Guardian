@@ -1,9 +1,0 @@
-FROM node:20-alpine
-WORKDIR /app
-COPY package.json turbo.json .env.example ./
-COPY apps/web/package.json apps/web/
-RUN npm install --no-audit --no-fund
-COPY . .
-WORKDIR /app/apps/web
-EXPOSE 3000
-CMD ["npm","run","dev"]
